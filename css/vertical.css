@@ -1,0 +1,180 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  margin: 0px;
+  background: #cccccc;
+}
+body header.header {
+  background: #999;
+  margin: 15px;
+  box-shadow: 0px 0px 5px #ffffff;
+}
+body header.header ul {
+  padding: 0px;
+  margin: 0px;
+}
+body header.header ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
+  width: calc(24%);
+  text-align: center;
+}
+body header.header ul li.active {
+  border-bottom: 2px solid #ffffff;
+}
+body header.header ul li a:hover {
+  text-decoration: none;
+  color: #cccccc;
+}
+body section.data-container {
+  background: #999;
+  margin: 15px;
+  box-shadow: 0px 0px 5px #ffffff;
+  padding: 25px;
+}
+body section.data-container form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+@media (max-width: 480px) {
+  body section.data-container form {
+    display: block;
+  }
+}
+body section.data-container form aside.form-data {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+@media (max-width: 990px) {
+  body section.data-container form aside.form-data {
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body section.data-container form aside.form-data {
+    display: block;
+    width: 100%;
+  }
+}
+body section.data-container form aside.form-data div {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+body section.data-container form aside.form-data div label {
+  width: 50%;
+}
+body section.data-container form aside.form-data div div {
+  padding: 0px;
+}
+body section.data-container form aside.form-data div input {
+  width: 50%;
+  float: right;
+}
+body section.data-container form aside.form-data div input[type="checkbox"] {
+  margin: 0px;
+  padding: 0px;
+}
+body section.data-container form aside.form-data div input[type="submit"] {
+  width: 100%;
+}
+body section.data-container form aside.avatar {
+  text-align: center;
+}
+body section.data-container form aside.avatar img {
+  border-radius: 50%;
+  overflow: hidden;
+}
+body section.data-container form aside.avatar input {
+  margin: auto;
+  display: block;
+}
+body table {
+  margin: auto;
+  width: 100%;
+  padding: 0px;
+}
+body table thead {
+  background: #ffffff;
+}
+body table thead tr {
+  text-align: center;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  display: none;
+  pointer-events: none;
+}
+.modal:target {
+  display: block;
+  pointer-events: auto;
+}
+.modal > div {
+  width: 300px;
+  position: relative;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  box-shadow: 0px 0px 20px 2px;
+}
+@media (max-width: 480px) {
+  .modal > div {
+    width: 80%;
+  }
+}
+.close {
+  background: #cc3300;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background: #990000;
+}
+.wrap {
+  margin: auto;
+}
+@media (max-width: 1400px) {
+  .wrap {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1200px) {
+  .wrap {
+    font-size: 10px;
+  }
+}
+@media (max-width: 990px) {
+  .wrap {
+    max-width: 900px;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    max-width: 400px;
+  }
+}
