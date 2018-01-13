@@ -7,13 +7,20 @@ class User_mdl extends MY_Model {
     }
     public function insertUser($data=null)
     {
-	    $insert_data['name_first'] = $data['name'];
-	    $insert_data['name_last'] = $data['surname'];
-	    $insert_data['email'] = $data['email'];
-	    $insert_data['charity_perc'] = $data['range'];
-	    
-		$this->db->insert('users', $insert_data);
-		return $this->db->insert_id();
+	    if(!empty($data))
+	    {
+		    $insert_data['name_first'] = $data['name'];
+		    $insert_data['name_last'] = $data['surname'];
+		    $insert_data['email'] = $data['email'];
+		    $insert_data['charity_perc'] = $data['range'];
+		    
+			$this->db->insert('users', $insert_data);
+			return $this->db->insert_id();
+		}
+		else
+		{
+			return false;
+		}
     }
     public function insertUsersCharity($userID, $data=null)
     {

@@ -13,7 +13,10 @@ class Results extends MY_Frontend {
 	    $userID = $this->User_mdl->insertUser($data);
 	    $this->User_mdl->insertUsersCharity($userID, $data);
 	    
-	    $this->content['categories'] = $this->Category_mdl->getCategoriesByID($data['category']);
+	    if(!empty($data['category']))
+	    {
+		    $this->content['categories'] = $this->Category_mdl->getCategoriesByID($data['category']);
+		}
 	    
 	    $this->content['data'] = $data;
 	    $this->content['Title'] = 'Результаты пожертвования';
